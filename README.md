@@ -9,7 +9,24 @@ un nombre réduit de sous-jacents, pour réduire le périmètre de recherche et 
 grosses capitalisations Européennes) en utilisant différentes méthodes de sélection de variables
 vues en cours.
 
-## Présentation de nos cas d'usage :clipboard:
+## 1. Récupérer les données de l'Eurostoxx 50 dans Python à partir du fichier 'Data_Eurostoxx_10min_Feb19_Sep19.csv'
+
+On récupère tout d'abord les données à l'aide de la fonction "read_csv".
+
+```
+eurostoxx_df = pd.read_csv(r".\Data_Eurostoxx_10min_Feb19_Sep19.csv", sep=';', decimal=",")
+```
+
+"""
+              Dates  ABI BB Equity  AD NA Equity  ADS GY Equity  AI FP Equity  ...  TEF SQ Equity  URW NA Equity  VIV FP Equity  VOW3 GY Equity  SX5E Index
+0  27/02/2019 09:00          65.65        22.870          212.4        109.95  ...          7.573         143.46          24.23          150.30     3279.78
+1  27/02/2019 09:10          65.69        22.490          212.2        109.90  ...          7.558         143.04          24.25          149.80     3275.70
+2  27/02/2019 09:20          65.58        22.440          212.0        109.75  ...          7.552         143.00          24.14          150.30     3273.88
+3  27/02/2019 09:30          65.74        22.545          211.9        109.90  ...          7.552         143.10          24.27          150.64     3277.38
+4  27/02/2019 09:40          65.64        22.410          211.9        109.90  ...          7.546         142.82          24.25          150.40     3272.65
+
+[5 rows x 50 columns]
+"""
 
 Pour ce projet, nous avons défini deux cas d'usage:
 1. Le premier, faire des requêtes HTTP en utilisant l'API [Coindesk]('https://api.coindesk.com/v1/bpi/currentprice.json') pour récupérer les prix du Bitcoin en temps réel et dans différentes devises (€, $ et £). L'utilisateur a ainsi accès au prix du Bitcoin, en direct, depuis son interface lightning.
