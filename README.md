@@ -60,7 +60,7 @@ eurostoxx_df_rend = eurostoxx_df_rend.dropna()
 ```
 Considérons les données ci-dessus qui ont toutes des échelles  différentes. Nous pourrons commencer à comparer ces caractéristiques et les utiliser dans nos modèles une fois que nous les aurons normalisées. Plus tard, lorsque nous exécuterons les modèles (régression logistique, MVC, perceptrons, réseaux neuronaux, etc.), les poids estimés seront mis à jour de manière similaire plutôt qu'à des rythmes différents au cours du processus de construction. Nous obtiendrons ainsi des résultats plus précis lorsque les données auront été normalisées pour la première fois.
 
-Pour cela, nous utilisons la fonction StandardScaler du package sklearn. Nous convertissons ensuite les valeurs scalés en un dataframe pandas.
+Pour cela, nous utilisons la fonction StandardScaler du package sklearn. Nous convertissons ensuite les valeurs scalées en un dataframe pandas.
 ```
 scaled_features = StandardScaler().fit_transform(eurostoxx_df_rend)
 eurostoxx_df_standardize = pd.DataFrame(scaled_features, columns=eurostoxx_df_rend.columns)
