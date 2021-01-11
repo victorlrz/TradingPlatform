@@ -9,7 +9,7 @@ un nombre réduit de sous-jacents, pour réduire le périmètre de recherche et 
 grosses capitalisations Européennes) en utilisant différentes méthodes de sélection de variables
 vues en cours.
 
-## 1. Récupérer les données de l'Eurostoxx 50 dans Python à partir du fichier 'Data_Eurostoxx_10min_Feb19_Sep19.csv'
+## 1. Récupération des données de l'Eurostoxx 50 dans Python.
 
 On récupère tout d'abord les données à l'aide de la fonction "read_csv".
 
@@ -26,6 +26,29 @@ Output :
 
 [5 rows x 50 columns]
 ```
+
+On observe tout d'abord les dimensions de notre dataframe initial ainsi que les valeurs qu'il contient.
+```
+# Dimensions of original data: (7011, 50)
+# Number of null values: 1100
+```
+
+On supprime les lignes contenant des valeurs manquantes puis on affiche les dimensions de notre nouveau dataframe.
+```
+# Dimensions of original data: (6660, 50)
+```
+
+On vérifie que notre dataframe ne contient plus de valeurs manquantes.
+```
+# Number of null values: 0
+```
+
+Enfin, on supprime la colonne "Dates" qui ne nous sera pas utile pour la suite.
+```
+eurostoxx_df_clean = eurostoxx_df_clean.drop(columns=['Dates'])
+```
+
+## Calcul des séries des rendements centrés et réduits de chaque composante et de l'Eurostoxx ('SX5E Index').
 
 Pour ce projet, nous avons défini deux cas d'usage:
 1. Le premier, faire des requêtes HTTP en utilisant l'API [Coindesk]('https://api.coindesk.com/v1/bpi/currentprice.json') pour récupérer les prix du Bitcoin en temps réel et dans différentes devises (€, $ et £). L'utilisateur a ainsi accès au prix du Bitcoin, en direct, depuis son interface lightning.
