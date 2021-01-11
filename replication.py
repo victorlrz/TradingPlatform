@@ -27,6 +27,7 @@ eurostoxx_df = pd.read_csv(
     r".\Data_Eurostoxx_10min_Feb19_Sep19.csv", sep=';', decimal=",")
 # print(eurostoxx_df.head())
 
+# Output
 """
               Dates  ABI BB Equity  AD NA Equity  ADS GY Equity  AI FP Equity  ...  TEF SQ Equity  URW NA Equity  VIV FP Equity  VOW3 GY Equity  SX5E Index
 0  27/02/2019 09:00          65.65        22.870          212.4        109.95  ...          7.573         143.46          24.23          150.30     3279.78
@@ -89,6 +90,17 @@ eurostoxx_df_standardize = pd.DataFrame(
 
 # Print the scaled data
 # print(eurostoxx_df_standardize.head())
+"""
+   ABI BB Equity  AD NA Equity  ADS GY Equity  ...  VIV FP Equity  VOW3 GY Equity  SX5E Index
+0       0.259608    -10.134002      -0.445245  ...       0.469875       -1.419557   -1.107091
+1      -0.782115     -1.352751      -0.445647  ...      -2.613117        1.421553   -0.499338
+2       1.094545      2.858577      -0.232803  ...       3.091884        0.962999    0.935047
+3      -0.712150     -3.649774      -0.019558  ...      -0.478618       -0.680563   -1.282996
+4      -0.296268     -1.357594       0.407134  ...       0.232360        0.225390   -0.211137
+
+[5 rows x 49 columns]
+[0.48565493 0.19621787]
+"""
 
 # We scale with the mean and the std of the whole dataset in order to have all values at the same scale
 # and keep the proportion of values between columns
@@ -168,7 +180,8 @@ def bestModelsComputation(nbr_features):
 
 # Exemple d'utilisation de la fonction pour 2 features, permet nottament d'afficher le nom des tickers inclus dans le modèle.
 
-# plotBestModel(bestModelsComputation(2))
+# models_best = bestModelsComputation(3)
+# print(models_best)
 
 # Si l'on souhaites accéder à un modèle (i -> exemple : i = 2) en particuler, nous pouvons utiliser la fonction ci-après.
 
@@ -719,6 +732,5 @@ def show_PCA_3D():
     # Rotate it
     ax.view_init(30, 45)
     plt.show()
-
 
 # show_PCA_3D()
