@@ -460,7 +460,7 @@ print(pca.explained_variance_ratio_)
 ```
 
 Nous obtenons le graphique suivant : 
-![usecase3](https://github.com/victorlrz/TradingPlatform/blob/main/src/FCA cumsum.JPG)
+![usecase3](https://github.com/victorlrz/TradingPlatform/blob/main/src/FCA%20cumsum.JPG)
 
 
 
