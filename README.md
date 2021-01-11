@@ -439,7 +439,30 @@ principal component 1  principal component 2  SX5E Index
 ```
 Et le plot suivant pour une ACP en deux dimensions :
 
-![usecase1](https://github.com/victorlrz/LightningPlugin/blob/main/src/gameplugin.JPG)
+![usecase1](https://github.com/victorlrz/TradingPlatform/blob/main/src/FCA.JPG)
+
+On observe clairement que deux dimensions suffisent pour séparer nos deux classes.
+Nous pouvons aussi observer les corrélations dans une heatmap : 
+
+![usecase2](https://github.com/victorlrz/TradingPlatform/blob/main/src/heatmap.JPG)
+
+#### Variation expliquée :
+
+La variance expliquée vous indique la quantité d'informations (variance) qui peut être attribuée à chacune des principales composantes. C'est important car si vous pouvez convertir un espace à 48 dimensions en un espace à 2 dimensions, vous perdez une partie de la variance (information) lorsque vous le faites.
+
+En utilisant l'attribut explained_variance_ratio_, vous pouvez voir que la première composante principale contient 48,57% de la variance et la deuxième composante principale contient 19,62% de la variance. Ensemble, les deux composantes contiennent 68,19 % de l'information.
+
+Vérifions s'il n'est pas préférables d'utiliser un plus grand nombre de dimensions : 
+```
+print(pca.explained_variance_ratio_)
+# [0.48565493 0.19621787] -> 2 dim
+# [0.48565493 0.19621787 0.12978701 0.0555851  0.03639996] -> 5 dim
+```
+
+Nous obtenons le graphique suivant : 
+![usecase3](https://github.com/victorlrz/TradingPlatform/blob/main/src/FCA cumsum.JPG)
+
+
 
 ## Authors :balloon:
 - Victor Larrezet
