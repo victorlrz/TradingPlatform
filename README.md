@@ -29,17 +29,20 @@ Output :
 
 On observe tout d'abord les dimensions de notre dataframe initial ainsi que les valeurs qu'il contient.
 ```
+Output: 
 # Dimensions of original data: (7011, 50)
 # Number of null values: 1100
 ```
 
 On supprime les lignes contenant des valeurs manquantes puis on affiche les dimensions de notre nouveau dataframe.
 ```
+Output: 
 # Dimensions of original data: (6660, 50)
 ```
 
 On vérifie que notre dataframe ne contient plus de valeurs manquantes.
 ```
+Output:
 # Number of null values: 0
 ```
 
