@@ -426,6 +426,19 @@ Summary Results :
 # 0.1278914496727536  170.35141096410777  0.8583981130006226
 ```
 
+## 5. Déterminer les composantes principales des 50 sous-jacents de l'indice et leur variance expliquée et tracer leur évolution. Proposer un nombre de composantes à conserver et essayer de les décrire simplement. En quoi la première composante diffère-t-elle de la régression multiple ? Régresser l'indice sur les k premières composantes et calculer l'erreur de réplication.
+
+On applique l'ACP sur nos 50 features. Nous obtenons le dataframe suivant : 
+```
+principal component 1  principal component 2  SX5E Index
+0              -6.170550               3.898411     3279.78
+1              -6.046791               3.987295     3275.70
+2              -6.114200               4.028436     3273.88
+3              -6.111830               3.937373     3277.38
+4              -5.978858               4.080713     3272.65
+```
+Et le plot suivant pour une ACP en deux dimensions :
+
 ![usecase1](https://github.com/victorlrz/LightningPlugin/blob/main/src/gameplugin.JPG)
 
 ## Authors :balloon:
