@@ -462,7 +462,11 @@ print(pca.explained_variance_ratio_)
 Nous obtenons le graphique suivant : 
 ![usecase3](https://github.com/victorlrz/TradingPlatform/blob/main/src/FCA%20cumsum.JPG)
 
+Au vu de la variance expliquée, nous pourrions retenir deux variables mais il serait préférable d'en sélectionner trois. Cela permettrait d'exprimer et représenter ~ 80% de la variance du modèle.
 
+Nous représentons enfin le modèle en trois dimensions : 
+
+![usecase4](https://github.com/victorlrz/TradingPlatform/blob/main/src/3D%20plot%20FCA.JPG)
 
 ## Authors :balloon:
 - Victor Larrezet
